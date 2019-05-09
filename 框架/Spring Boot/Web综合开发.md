@@ -69,7 +69,7 @@ com.hiki.description=px
     }
 ```
 
-**log配置** 
+**log配置**  
 配置输出的地址和输出级别  
 
 ```
@@ -85,7 +85,7 @@ path为本机的log地址，logging.level 后面可以根据包路径配置不�
 
 jpa是利用Hibernate生成各种自动化的sql，如果只是简单的增删改查，基本上不用手写了，spring内部已经帮大家封装实现了。
 
-**使用步骤**
+**如何在spring boot中使用**
 
 - 1.添加相jar包
 
@@ -125,7 +125,8 @@ spring.jpa.show-sql= true
 - 3.添加实体类和Dao
 
 ```
-@Entitypublic class User implements Serializable { 
+@Entity
+public class User implements Serializable { 
     private static final long serialVersionUID = 1L;    
     
     @Id
@@ -158,7 +159,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
 - 4、测试
 
 ```
-@RunWith(SpringJUnit4ClassRunner.class)@SpringApplicationConfiguration(Application.class)public class UserRepositoryTests {    @Autowired
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = MockServletContext.class)
+public class UserRepositoryTests {    
+    @Autowired
     private UserRepository userRepository;   
      @Test
     public void test() throws Exception {
@@ -195,8 +199,7 @@ Thymeleaf: <p th:text="${message}">Hello World!</p>
 
 注意，由于Thymeleaf使用了XML DOM解析器，因此它并不适合于处理大规模的XML文件。
 
-### WebJars
-
+**WebJars**
 WebJars是一个很神奇的东西，可以让大家以jar包的形式来使用前端的各种框架、组件。
 
 **什么是WebJars**
