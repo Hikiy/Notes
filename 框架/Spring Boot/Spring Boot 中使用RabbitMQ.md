@@ -284,8 +284,8 @@ public class FanoutReceiver1 {
     }
 ```
 
-
-
-> [项目代码](https://github.com/Hikiy/SpringBootLearn)
+> [项目代码](https://github.com/Hikiy/SpringBootLearn)  
+> github: https://github.com/Hikiy  
+> 作者：Hiki
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
