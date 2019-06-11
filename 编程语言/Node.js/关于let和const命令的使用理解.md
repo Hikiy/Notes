@@ -15,3 +15,11 @@ const声明一个只读的常量。一旦声明，常量的值就不能改变。
 const声明的变量和let有类似的限制，命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用，同样在一个相同的作用域内不能重复声明。  
 
 **const实际保证的并不是变量的值不得改动，而是变量指向的那个内存地址不得改动。**
+
+<br /><br /><br /><br />
+> github: https://github.com/Hikiy  
+> 作者：Hiki  
+> 创建日期：2019.04.27  
+> 更新日期：2019.04.27
+
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  

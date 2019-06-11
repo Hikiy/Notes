@@ -91,3 +91,11 @@ config.security = {
 - 然后用postman发送post请求发现post传过去的值为undefined
 - 需要使用另一个格式传值，使用x-www-form-urlencoded传值，或者说headers加上`[{"key":"Content-Type","value":"application/x-www-form-urlencoded"}]`
 - 成功
+
+<br /><br /><br /><br />
+> github: https://github.com/Hikiy  
+> 作者：Hiki  
+> 创建日期：2019.04.30  
+> 更新日期：2019.04.30
+
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
