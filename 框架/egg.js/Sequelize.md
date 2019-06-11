@@ -94,9 +94,9 @@ let groupbuyTimeoutList = await this.ctx.model.OrderGroupbuyTagsModel.findAll({
 - 其中`hasMany`和`belongsTo`是用于**关联**两个表
 
 > belongsTo - 属于。本例中意思是OrderGroupbuyTagsModel属于GroupbuyModel。外键在OrderGroupbuyTagsModel上
-> 
+>
 > hasMany - 拥有许多。本例中意思是GroupbuyModel有很多个OrderGroupbuyTagsModel。
-> 
+>
 > hasOne - 拥有一个。
 
 
@@ -191,8 +191,10 @@ await this.ctx.model.RefundsModel.create({
 });
 ```
 
-
+<br /><br /><br /><br />
 > github: https://github.com/Hikiy  
-> 作者：Hiki
+> 作者：Hiki  
+> 创建日期：2019.06.10  
+> 更新日期：2019.06.10
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  

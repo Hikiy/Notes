@@ -57,3 +57,11 @@ $redis->lLen($key);//获取队列长度
 $redis->lPush($key, $v['id']);//左push操作
 $redis->rPop($key);//右pop操作，左push 右pop为先进先出
 ```
+
+<br /><br /><br /><br />
+> github: https://github.com/Hikiy  
+> 作者：Hiki  
+> 创建日期：2019.05.14  
+> 更新日期：2019.05.14
+
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
