@@ -38,3 +38,10 @@ function send_post_raw($url, $str) {
     return $data;
 }
 ```
+
+<br /><br /><br /><br />
+
+> github: https://github.com/Hikiy  
+> 作者：Hiki
+
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
