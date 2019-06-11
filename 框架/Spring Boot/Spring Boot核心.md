@@ -1,4 +1,6 @@
 # Spring Boot核心
+2019年5月8日15:56:29
+
 ### 基本设置
 **入口类和@SpringBootApplication**
 
@@ -96,30 +98,20 @@ logging.file=D:/mylog/log.log
 logging.level.org.springframework.web=DEBUG
 
 ```
+**Profile配置|多环境配置**  
+Profile是Spring用来针对不同环境对不同配置提供支持。例如生产环境(prod)和开发环境(dev)  
+用法：  
+- 在`application.properties`所在文件夹新建properties,分别命名为`application-prod.properties`和`application-dev.properties`
+- 在`application.properties`增加配置使用dev环境：
+```
+spring.profiles.active=dev
+```
 
+<br /><br /><br /><br />
+> [项目代码](https://github.com/Hikiy/SpringBootLearn)  
+> github: https://github.com/Hikiy  
+> 作者：Hiki  
+> 创建日期：2019.05.08  
+> 更新日期：2019.05.23
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center> 

@@ -1,5 +1,7 @@
 # Redis操作
+
 依赖包：
+
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -12,6 +14,7 @@
 ```
 
 ### Application配置
+
 ```
 # Redis 数据库索引（默认为 0）
 spring.redis.database=0
@@ -30,9 +33,13 @@ spring.redis.lettuce.pool.max-idle=8
 # 连接池中的最⼩小空闲连接 默认 0
 spring.redis.lettuce.pool.min-idle=0
 ```
+
 Spring Boot 默认⽀支持 Lettuce 连接池  
+
 ### 测试使用
+
 直接上代码：
+
 ```
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -69,6 +76,7 @@ Could not autowire. There is more than one bean of 'RedisTemplate' type.Beans:re
 ### 实体
 
 Redis支持Pojo类型
+
 ```
 public void testObj(){
     User user=new User("hiki@cool.com", "good", "shoot", "knight","2019");
@@ -78,14 +86,18 @@ public void testObj(){
     System.out.println("user: "+u.toString());
 }
 ```
+
 ### 超时
+
 就是每个数据的超时时间，时间到了会自动删除。直接上代码：：
+
 ```
 ValueOperations<String, User> operations=redisTemplate.opsForValue();
 operations.set("hiki", user,100,TimeUnit.MILLISECONDS);//单位毫秒
 ```
 
 ### 删除
+
 ```
 @Test
 public void testDelete() {
@@ -102,7 +114,9 @@ public void testDelete() {
 ```
 
 ### Hash（哈希）
+
 Hash Set 就在哈希表 Key中的域（Field）的值设为value。如果Key不存在，一个新的哈希表被创建并进行 HSET 操作；如果域（field）已经存在于哈希表中，旧值将被覆盖。
+
 ```
 @Test
 public void testHash() {
@@ -112,9 +126,13 @@ public void testHash() {
     System.out.println("hash value :"+value);
 }
 ```
+
 第一个为可以，第二个为field，第三个为存储的值。也就是类似二维数组,仔细想想就是hash的结构。  
+
 ### List
+
 使用List可以轻松实现队列，典型应用场景是消息队列，利用Push、Pop操作。
+
 ```
 @Test
 public void testList() {
@@ -128,14 +146,18 @@ public void testList() {
 ```
 
 结果：
+
 ```
 list value :knight
 ```
+
 这不是栈么。。。  
 上面的例子是左插，还可以右插（右插的话应该就是队列了），Redis是双向链表，因此带来了额外的内存开销
 
 ### Set
+
 与List类似，但是自动排重，Set 可以判断某个成员是否在Set集合内的重要接口。
+
 ```
 @Test
 public void testSet() {
@@ -153,6 +175,7 @@ public void testSet() {
 ```
 
 结果：
+
 ```
 set value :hiki
 set value :knight
@@ -160,6 +183,7 @@ set value :cool
 ```
 
 #### difference方法
+
 ```
     SetOperations<String, String> set = redisTemplate.opsForSet();
     String key1="setMore1";
@@ -175,19 +199,26 @@ set value :cool
         System.out.println("diffs set value :"+v);
     }
 ```
+
 结果：
+
 ```
 diffs set value :hiki
 diffs set value :cool
 ```
+
 根据上面这个例⼦子可以看出，difference()函数会把key1中不同于key2的数据对比出来，这个特性适合我们在金融场景中对账的时候使用。
 
 #### unions方法
+
 将两个集合合起来，不贴代码了
+
 > Set 的内部实现是一个 Value 永远为 null 的 HashMap，实际就是通过计算 Hash 的方式来快速排重，这也是 Set 能提供判断一个成员是否在集合内的原因。
 
 ### ZSet
+
 ZSet是自动有序的，用户可以通过优先级的参数（Score）来为成员排序
+
 ```
 @Test
 public void testZset(){
@@ -208,7 +239,9 @@ public void testZset(){
     }
 }
 ```
+
 结果：
+
 ```
 zset value :it
 zset value :neo
@@ -217,10 +250,13 @@ zset value :you
 zsetB value :it
 zsetB value :neo
 ```
->Redis Sorted Set 的内部使用HashMap和跳跃表（SkipList）来保证数据的存储和有序，HashMap 里放的是成员到Score的映射，而跳跃表⾥存放的是所有的成员，排序依据是HashMap 里存的 Score，⽤用跳跃表的结构可以获得比较高的查找效率，并且在实现上比较简单。
+
+> Redis Sorted Set 的内部使用HashMap和跳跃表（SkipList）来保证数据的存储和有序，HashMap 里放的是成员到Score的映射，而跳跃表⾥存放的是所有的成员，排序依据是HashMap 里存的 Score，⽤用跳跃表的结构可以获得比较高的查找效率，并且在实现上比较简单。
 
 ### 封装
+
 实际使用时，一般将redisTemplate封装到一个类中使用，例如：
+
 ```
 @Service
 public class RedisService {
@@ -228,6 +264,7 @@ public class RedisService {
     private RedisTemplate redisTemplate;
 }
 ```
+
 ```
 public boolean set(final String key, Object value) {
     boolean result = false;
@@ -242,8 +279,11 @@ public boolean set(final String key, Object value) {
 }
 ```
 
+<br /><br /><br /><br />
 > [项目代码](https://github.com/Hikiy/SpringBootLearn)  
 > github: https://github.com/Hikiy  
-> 作者：Hiki
+> 作者：Hiki  
+> 创建日期：2019.04.12  
+> 更新日期：2019.05.15
 
-<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
+<center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center> 
