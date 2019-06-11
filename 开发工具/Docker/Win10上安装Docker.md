@@ -27,8 +27,11 @@ Error response from daemon: Get https://registry-1.docker.io/v2/: net/http: requ
 - Docker 官方提供的中国 registry mirror https://registry.docker-cn.com
 - [阿里云加速器(需登录账号获取)](https://cr.console.aliyun.com/cn-hangzhou/mirrors)
 - 七牛云加速器 https://reg-mirror.qiniu.com/
+
 <br /><br /><br /><br />
 > github: https://github.com/Hikiy  
-> 作者：Hiki
+> 作者：Hiki  
+> 创建日期：2019.04.17  
+> 更新日期：2019.04.17
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
