@@ -18,6 +18,7 @@
 #### 部署
 [测试方法和热部署](https://github.com/Hikiy/Notes/blob/master/%E6%A1%86%E6%9E%B6/Spring%20Boot/%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95%E5%92%8C%E7%83%AD%E9%83%A8%E7%BD%B2.md)</br>
 [打包](https://github.com/Hikiy/Notes/blob/master/%E6%A1%86%E6%9E%B6/Spring%20Boot/%E6%89%93%E5%8C%85.md)</br>
+[Tomcat配置](https://github.com/Hikiy/Notes/blob/master/%E6%A1%86%E6%9E%B6/Spring%20Boot/Tomcat%E9%85%8D%E7%BD%AE.md)</br>
 
 <br /><br /><br /><br />
 > github: https://github.com/Hikiy  
