@@ -65,7 +65,7 @@ const Op = require('sequelize').Op;
 .
 .
 //用来关联两张表的
-this.ctx.model.GroupbuyModel.hasMany(this.ctx.model.OrderGroupbuyTagsModel, { foreignKey: 'gbid', sourceKey: 'gbid' });
+//this.ctx.model.GroupbuyModel.hasMany(this.ctx.model.OrderGroupbuyTagsModel, { foreignKey: 'gbid', sourceKey: 'gbid' });
 this.ctx.model.OrderGroupbuyTagsModel.belongsTo(this.ctx.model.GroupbuyModel, { foreignKey: 'gbid', targetKey: 'gbid' });
 
 let groupbuyTimeoutList = await this.ctx.model.OrderGroupbuyTagsModel.findAll({
@@ -98,6 +98,8 @@ let groupbuyTimeoutList = await this.ctx.model.OrderGroupbuyTagsModel.findAll({
 > hasMany - 拥有许多。本例中意思是GroupbuyModel有很多个OrderGroupbuyTagsModel。
 >
 > hasOne - 拥有一个。
+
+在本例中，只是用了belongsTo是因为，只需要对OrderGroupbuyTagsModel进行操作，也就是只对需要进行操作的模型进行声明即可
 
 
 
@@ -195,6 +197,6 @@ await this.ctx.model.RefundsModel.create({
 > github: https://github.com/Hikiy  
 > 作者：Hiki  
 > 创建日期：2019.06.10  
-> 更新日期：2019.06.10
+> 更新日期：2019.06.17
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
