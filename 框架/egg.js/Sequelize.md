@@ -150,7 +150,14 @@ Project.findAll({ where: { ... }, raw: true })
 
 将`bar`重命名为`baz`：
 
+```
+Model.findAll({
+  attributes: ['foo', ['bar', 'baz']]
+});
+```
+
 **聚合**
+
 ```
 Model.findAll({
   attributes: [[sequelize.fn('COUNT', sequelize.col('hats')), 'no_hats']]
@@ -165,11 +172,6 @@ Model.findAll({
 });
 ```
 
-```
-Model.findAll({
-  attributes: ['foo', ['bar', 'baz']]
-});
-```
 ### 更新
 ```
 await this.ctx.model.OrderGroupbuyTagsModel.update({
@@ -200,3 +202,4 @@ await this.ctx.model.RefundsModel.create({
 > 更新日期：2019.06.17
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
+
