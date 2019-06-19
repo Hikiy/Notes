@@ -19,6 +19,8 @@
 
 [egg.js](<https://github.com/Hikiy/Notes/tree/master/%E6%A1%86%E6%9E%B6/egg.js>)
 
+[Spring Cloud](https://github.com/Hikiy/Notes/tree/master/%E6%A1%86%E6%9E%B6/Spring%20Cloud)
+
 ## 开发工具
 
 [Docker](<https://github.com/Hikiy/Notes/tree/master/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Docker>)
@@ -37,6 +39,6 @@
 
 > github: https://github.com/Hikiy  
 > 作者：Hiki  
-> 更新日期：2019.06.11
+> 更新日期：2019.06.19
 
 <center>(<font color=red size=2>转载文章请注明作者和出处 </font><a href="https://github.com/Hikiy">Hiki)</a></center>  
